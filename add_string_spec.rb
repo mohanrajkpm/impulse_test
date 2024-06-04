@@ -29,5 +29,12 @@ RSpec.describe AddString do
         expect(adder.calculate).to eq(3)
       end
     end
+
+    context "when there are negative numbers" do
+      it "raises an ArgumentError with a message" do
+        adder = AddString.new("-2")
+        expect { adder.calculate }.to raise_error(ArgumentError, "Negative numbers not allowed: -2")
+      end
+    end
   end
 end
