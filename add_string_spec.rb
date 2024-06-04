@@ -15,5 +15,12 @@ RSpec.describe AddString do
         expect(adder.calculate).to eq(5)
       end
     end
+
+    context "when given multiple numbers separated by commas and newlines" do
+      it "returns the sum of the numbers" do
+        adder = AddString.new("1\n2,3")
+        expect(adder.calculate).to eq(6)
+      end
+    end
   end
 end
