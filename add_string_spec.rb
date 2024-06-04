@@ -22,5 +22,12 @@ RSpec.describe AddString do
         expect(adder.calculate).to eq(6)
       end
     end
+
+    context "when using a custom delimiter" do
+      it "returns the sum using the custom delimiter" do
+        adder = AddString.new("//;\n1;2")
+        expect(adder.calculate).to eq(3)
+      end
+    end
   end
 end
