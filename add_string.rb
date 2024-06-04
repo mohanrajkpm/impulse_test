@@ -51,10 +51,12 @@ puts adder.calculate  # Output: 6
 adder = AddString.new("//;\n1;2")
 puts adder.calculate  # Output: 3
 
+adder = AddString.new("1,2,3")
+puts adder.calculate  # Output: 6
 # Test case with negative numbers
 begin
-  adder = AddString.new("-2")
+  adder = AddString.new("-2, 5, -6")
   puts adder.calculate
 rescue ArgumentError => e
-  puts e.message  # Output: Negative numbers not allowed: -2
+  puts e.message  # Output: Negative numbers not allowed: -2 -6
 end

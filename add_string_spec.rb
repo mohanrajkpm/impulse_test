@@ -36,5 +36,12 @@ RSpec.describe AddString do
         expect { adder.calculate }.to raise_error(ArgumentError, "Negative numbers not allowed: -2")
       end
     end
+
+    context "when given multiple numbers separated by commas" do
+      it "returns the sum of the numbers" do
+        adder = AddString.new("1,2,3")
+        expect(adder.calculate).to eq(6)
+      end
+    end
   end
 end
