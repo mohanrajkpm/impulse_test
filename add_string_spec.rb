@@ -8,5 +8,12 @@ RSpec.describe AddString do
         expect(adder.calculate).to eq(0)
       end
     end
+
+    context "when given a single number" do
+      it "returns the number itself" do
+        adder = AddString.new("5")
+        expect(adder.calculate).to eq(5)
+      end
+    end
   end
 end
