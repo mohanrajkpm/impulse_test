@@ -1,10 +1,16 @@
 # Test assessment
 
+## Run ruby code
 
-### Run add_string.rb
+Software Requirements
 
-## ruby add_string.rb
+ * Install latest Ruby version
+ * gem install rspec
 
-### Run add_string test case
+## Run ruby code
 
-## rspec add_string_spec.rb
+### ruby add_string.rb
+
+## Run spec
+
+### rspec add_string_spec.rb
